@@ -24,7 +24,7 @@ app.get('/ExecutionInfo*', function (req, res) {
     executionReport.getExecutionReport(req, res);
 });
 
-app.get('/topSuccessFeatures', function (req, res) {
+app.get('/topFeatures', function (req, res) {
     
     var number = req.query.number;
     var executionResult = req.query.executionResult;
@@ -32,7 +32,7 @@ app.get('/topSuccessFeatures', function (req, res) {
     topFeatures.getTopFeaturs(req, res, number, executionResult);
 });
 
-app.get('/topTestCaseSuccess', function (req, res) {
+app.get('/topTestCases', function (req, res) {
     
     var number = req.query.number;
     var executionResult = req.query.executionResult;
