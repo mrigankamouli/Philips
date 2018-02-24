@@ -1,6 +1,7 @@
 var config = require("./config");
 var executionReport = require("./modules/ExecutionReport");
 var topFeatures = require("./modules/TopFeatures");
+var topTestcases = require("./modules/TopTestCases");
 
 var express = require('express');
 var app = express();
@@ -17,15 +18,15 @@ app.get('/ExecutionInfo*', function (req, res) {
 });
 
 app.get('/topSuccessFeatures', function (req, res) {
-    res.end("Coming Soon...");
-    //var number = req.query.number;
-    //topFeatures.getTopFeaturs(req, res, number);
+    
+    var number = req.query.number;
+    topFeatures.getTopFeaturs(req, res, number);
 });
 
 app.get('/topTestCaseSuccess', function (req, res) {
-    res.end("Coming Soon...");
-    //var number = req.query.number;
-    //topFeatures.getTopFeaturs(req, res, top);
+    
+    var number = req.query.number;
+    topTestcases.getTopTestcases(req, res, number);
 });
 
 

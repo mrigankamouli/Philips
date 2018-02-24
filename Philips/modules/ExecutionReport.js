@@ -85,10 +85,7 @@ function executionReport(request, response)
         };
 
         totalTestCaseFind();
-       /* response.writeHead(200,{"content-type":"application/json"});
-        response.write(JSON.stringify(resultObj));
-        client.close();
-        response.end();*/
+      
 
         });
     }
