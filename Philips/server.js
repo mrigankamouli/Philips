@@ -20,13 +20,17 @@ app.get('/ExecutionInfo*', function (req, res) {
 app.get('/topSuccessFeatures', function (req, res) {
     
     var number = req.query.number;
-    topFeatures.getTopFeaturs(req, res, number);
+    var executionResult = req.query.executionResult;
+    
+    topFeatures.getTopFeaturs(req, res, number, executionResult);
 });
 
 app.get('/topTestCaseSuccess', function (req, res) {
     
     var number = req.query.number;
-    topTestcases.getTopTestcases(req, res, number);
+    var executionResult = req.query.executionResult;
+    
+    topTestcases.getTopTestcases(req, res, number, executionResult);
 });
 
 
